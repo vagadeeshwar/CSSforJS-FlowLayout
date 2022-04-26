@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body,
+#__next,
+#root {
+  height: 100%;
+  padding: 0;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* * {
+  overflow-wrap: break-word;
+  hyphens: auto;
+} */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Add styles here! */
+:root {
+  --s1: 8px;
+  --s2: 16px;
+  --s3: 24px;
+  --s4: 32px;
+  --s5: 48px;
+  --s6: 64px;
+  --s7: 96px;
+  --s8: 128px;
+  --p-green: hsl(160deg 100% 30%);
+  --s-goldl: hsl(45deg 100% 50%);
+  --s-gold: hsl(45deg 100% 40%);
+  --g-black: hsl(0deg 0% 0%);
+  --g-vdark: hsl(0deg 0% 10%);
+  --g-dark: hsl(0deg 0% 30%);
+  --g-medium: hsl(0deg 0% 40%);
+  --g-light: hsl(0deg 0% 60%);
+  --g-white: hsl(0deg 0% 100%);
+}
+/* 
+- `1rem`
+- `1.25rem`
+- `1.5rem`
+- `2rem` */
+div.max-width-wrapper {
+  /* padding-left: var(--s8); */
+  padding-top: var(--s7);
+  padding-bottom: var(--s6);
+}
+
+.intro-chunk {
+  margin: 0 auto;
+  width: 55.5%;
+
+  /* min-width: 768px; */
+  padding-left: var(--s3);
+}
+
+.title {
+  margin-bottom: var(--s5);
+  font-size: 2rem;
+}
+
+strong {
+  color: var(--p-green);
+}
+
+div p:first-of-type {
+  margin-bottom: var(--s3);
+}
+
+div.max-width-wrapper p {
+  width: 330px;
+}
+section.max-width-wrapper {
+  background-color: var(--g-light);
+  border-top: var(--s1) solid var(--g-medium);
+  padding-bottom: var(--s6);
+}
+.card {
+  background-color: var(--g-white);
+  width: 55.5%;
+  margin: var(--s6) auto;
+  margin-bottom: 0;
+  padding: var(--s3);
+  padding-top: var(--s1);
+  font-size: 1.25rem;
+  border-bottom: var(--g-medium) solid var(--s1);
+  /* min-width: 768px; */
+}
+.indented-heading {
+  font-size: 1.5rem;
+  background-color: var(--s-goldl);
+  border-bottom: var(--s-gold) var(--s1) solid;
+  padding: var(--s2) var(--s4);
+  margin-left: -32px;
+  width: fit-content;
+  margin-bottom: var(--s3);
+}
+
+@media (max-width: 768px) {
+  .intro-chunk:not(.title) {
+    font-size: 1.25rem;
+  }
+  .card,
+  .intro-chunk {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro-chunk:not(.title),
+  .card:not(.indented-heading) {
+    font-size: 1.5rem;
+  }
+}
